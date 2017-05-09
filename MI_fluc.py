@@ -37,7 +37,7 @@ def flucuationMI(traj,filename):
 	for i in range(0,nResidues):
 		for j in range(i,nResidues):
 			minbin=min(bins[i],bins[j])
-			hist2d=np.histogram2d(fluc_points[:,i],fluc_points[:,j],bins=minbin)[0]
+			hist2d=np.histogram2d(fluc_points[:,i],fluc_points[:,j],bins=minbin,normed=True)[0]
 			MI[i,j]=mutual_info_score(None, None, contingency=hist2d)
 			MI[j,i]=MI[i,j]
 

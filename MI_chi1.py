@@ -45,7 +45,7 @@ def MIchi1(traj,filename):
 				MI[j,i]=0 
 			else:
 				minbin=min(bins[i],bins[j])
-				hist2d=np.histogram2d(chitot[:,i],chitot[:,j],bins=minbin)[0]
+				hist2d=np.histogram2d(chitot[:,i],chitot[:,j],bins=minbin,normed=True)[0]
 				MI[i,j]=mutual_info_score(None, None, contingency=hist2d)
 				MI[j,i]=MI[i,j]
 
