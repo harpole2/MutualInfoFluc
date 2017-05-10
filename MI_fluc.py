@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.metrics import mutual_info_score
 from scipy.stats import skew
 
-#traj = md.load('EAG_withnoCAM_pro.dcd', top='EAGwithnoCaM_pro.psf')
+
 
 def flucuationMI(traj,filename):
 	nFrames = int(traj.n_frames)
