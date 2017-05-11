@@ -25,7 +25,7 @@ def flucuationMI(traj,filename):
 	fluc_points = np.zeros((nFrames,nResidues))
 	for i in range(0, fluc_points.shape[0]):
 		for j in range(0,fluc_points.shape[1]):
-			fluc_points[i,j]=np.linalg.norm(points[i,j]-mean_points[j])
+			fluc_points[i,j]=np.absolute(np.linalg.norm(points[i,j]-mean_points[j]))
 
 	#calculate number of bins using doannes rule
 	sha = fluc_points.shape[0]
