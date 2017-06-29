@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.metrics import mutual_info_score
 from scipy.stats import skew
 from scipy.stats import zscore
+from sklearn.feature_selection import mutual_info_regression
 
 
 
